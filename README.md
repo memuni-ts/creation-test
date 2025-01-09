@@ -1,9 +1,9 @@
 # お問い合わせフォーム
 
 ## 環境構築
-Dockerビルド
-  1.git clone 
-  2.docker compose up -d --build
+-Dockerビルド
+  1. git clone 
+  2. docker compose up -d --build
 ＊ MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせて docker-compose.ymlファイルを編集してください。
 
 ## 使用技術(実行環境)
