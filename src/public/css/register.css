@@ -1,0 +1,106 @@
+.header {
+  width: 100%; /* 幅を100%に */
+  border-bottom: 1px solid #E9E9E9; /* ヘッダー下に線を追加 */
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center; /* 子要素を中央揃え */
+  align-items: center; /* 垂直方向も中央揃え */
+  margin: 0 auto; /* 水平に中央に配置 */
+  padding: 20px 15px; /* .header__inner 内のコンテンツ（ロゴ）の余白を追加 */
+  max-width: 1230px; /* 横幅が広すぎないように制限 */
+  width: 100%; /* 幅を100%にして画面幅に応じて縮小 */
+}
+
+.header__logo {
+  color: #897767;
+  text-decoration: none; /* ロゴに下線が付かないように */
+  font-weight: bold;
+  font-size: 34px;
+  font-family: serif;
+}
+
+.contact-form__content {
+  padding: 30px;
+  max-width: 400px; /* フォームの最大幅 */
+  width: 100%; /* 横幅を親に合わせる */
+  margin: 0 auto; /* 中央揃え */
+}
+
+.contact-form__heading {
+  color: #897767;
+  font-size: 20px;
+  font-family: serif;
+  margin-bottom: 40px; /* フォーム達とちょっと間空ける */
+  text-align: center;
+}
+
+.contact-form__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #897767;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto; /* フォーム全体を中央揃え */
+  width: 80%;
+}
+
+/* ラベル含むフォームひとかたまり全体の設定 */
+.form__group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* 共通のスタイル */
+.form__group-content input {
+  padding: 10px 10px 10px 15px; /* 内側の余白(入力部分を広く) */
+  border: none; /* 枠線を削除 */
+  background-color: #f4f4f4; /* 背景色を設定 */
+  appearance: none; /* デフォルトのスタイルを無効に */
+  width: 400px;
+  height: 40px;
+}
+
+/* placeholder共通スタイル - 未入力状態 */
+input::placeholder {
+  color: #beb1a7;
+}
+
+/* テキスト共通スタイル - 入力済みの色 */
+input:focus,
+input:not(:placeholder-shown) {
+  color: #897767;
+}
+
+.form__label--item {
+  color: #897767;
+  font-size: 20px;
+}
+
+.form__button {
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  margin-top: 30px; /* 上の要素と適度な距離を */
+}
+
+.form__button-submit {
+  padding: 10px; /* ボタンとテキスト間の余白 */
+  width: 120px;
+  height: 45px;
+  border: none; /* ボタンの枠線を削除 */
+  background: #82756b;
+  font-size: 20px;
+  color: #fff; /* 文字色が白 */
+  cursor: pointer; /* カーソル合わせるとポインターになる */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  text-align: center;       /* テキストを中央揃え */
+}

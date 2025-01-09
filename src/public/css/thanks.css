@@ -1,0 +1,21 @@
+/* "Thank you" を背景として表示 */
+body::before {
+  content: "Thank you";  /* 表示するテキスト */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  font-size: 200px; /* サイズ調整 */
+  color: #f9f8f7;  /* 薄い茶色（透明度を調整） */
+  z-index: -1; /* 背景として表示 */
+  font-weight: bold;
+  white-space: nowrap; /* 改行しない */
+}
+
+.thanks__content {
+  text-align: center;
+}
+
+.thanks__heading {
+  color:#8b7969
+}

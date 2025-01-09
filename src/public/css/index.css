@@ -1,0 +1,218 @@
+.header {
+  width: 100%; /* 幅を100%に */
+  border-bottom: 1px solid #E9E9E9; /* ヘッダー下に線を追加 */
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center; /* 子要素を中央揃え */
+  align-items: center; /* 垂直方向も中央揃え */
+  margin: 0 auto; /* 水平に中央に配置 */
+  padding: 20px 15px; /* .header__inner 内のコンテンツ（ロゴ）の余白を追加 */
+  max-width: 1230px; /* 横幅が広すぎないように制限 */
+  width: 100%; /* 幅を100%にして画面幅に応じて縮小 */
+}
+
+.header__logo {
+  color: #897767;
+  text-decoration: none; /* ロゴに下線が付かないように */
+  font-weight: bold;
+  font-size: 34px;
+  font-family: serif;
+}
+
+.contact-form__content {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 1230px;
+}
+
+.contact-form__heading {
+  color: #897767;
+  font-size: 20px;
+  font-family: serif;
+  margin-bottom: 40px; /* フォーム達とちょっと間空ける */
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto; /* フォーム全体を中央揃え */
+  width: 80%;
+}
+
+/* ラベル含むフォームひとかたまり全体の設定 */
+.form__group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* 共通のスタイル */
+.form__group-content input,
+.form__group-content select,
+.form__group-content textarea {
+  padding: 10px 10px 10px 15px; /* 内側の余白(入力部分を広く) */
+  border: none; /* 枠線を削除 */
+  background-color: #f4f4f4; /* 背景色を設定 */
+  appearance: none; /* デフォルトのスタイルを無効に */
+  width: 600px;
+  height: 40px;
+}
+
+/* placeholder共通スタイル - 未入力状態 */
+input::placeholder,
+textarea::placeholder,
+select {
+  color: #beb1a7;
+}
+
+/* テキスト共通スタイル - 入力済みの色 */
+input:focus,
+textarea:focus,
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown),
+select:valid {
+  color: #897767;
+}
+
+.form__label--item {
+  color: #897767;
+  font-size: 20px;
+}
+
+.form__label--required {
+  margin-left: 5px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  color: #ff9494;
+}
+
+.form__input--name {
+  display: flex;
+}
+
+.form__input--name input {
+  width: 280px;
+  margin-right: 40px; /* 余白を追加 */
+}
+
+.form__input--name input:last-child {
+  margin-right: 0; /* 最後の入力欄には余白を追加しない */
+}
+
+.form__input--radio {
+  display: flex; /* フレックスボックスを使って並べる */
+  align-items: center; /* 中央揃え（縦方向） */
+  width: 590px;
+}
+
+/* ラジオボタンのスタイル */
+.form__group-content input[type="radio"] {
+  appearance: radio; /* デフォルトのラジオボタン */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* 円形にする */
+  border: 2px solid #897767; /* 枠線の色 */
+  background-color: white; /* 背景色 */
+  cursor: pointer;
+  position: relative; /* 内部のチェック用アイコンを配置するため */
+  margin-right: 10px; /* ラベルとボタンの間のスペース */
+  vertical-align: middle; /* ラジオボタンを縦方向で中央揃え */
+}
+
+/* チェックされたときのラジオボタンのデザイン */
+.form__group-content input[type="radio"]:checked {
+  background-color: #897767; /* チェックされた時の背景色 */
+  border-color: #897767; /* 枠線色 */
+  outline: none; /* 選択時のアウトラインを削除 */
+}
+
+/* ラジオボタンが選択されたときに内部を完全に塗りつぶす */
+.form__group-content input[type="radio"]:checked::before {
+  content: '';                /* 擬似要素を利用して点を表示しない */
+  position: absolute;         /* ラジオボタンの中で位置を指定 */
+  top: 0;                     /* 上端に位置させる */
+  left: 0;                    /* 左端に位置させる */
+  width: 100%;                /* 幅を100%にして完全に塗りつぶす */
+  height: 100%;               /* 高さを100%にして完全に塗りつぶす */
+  border-radius: 50%;         /* 丸い形に */
+  background-color: #897767;    /* 点の色を茶に */
+}
+
+/* ラジオボタンのラベルに対するスタイル */
+.form__input--radio label {
+  font-size: 18px;
+  color: #897767;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 60px; /* ラベル同士の間隔 */
+  vertical-align: middle; /* ラベルをラジオボタンと揃える */
+}
+
+.form__input--select {
+  display: flex;
+  justify-content: flex-start;
+  width: 350px;
+}
+
+.form__input--select select {
+  appearance: none;
+  padding-right: 30px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"%3E%3Cpath fill="%23897667" d="M5 7L10 12L15 7H5Z" /%3E%3C/svg%3E') no-repeat right center; /* ▼のアイコンを右端に配置 */
+  background-position: right 10px center; /* 矢印の位置を右端に調整 */
+  width: 100%;
+  background-color:#f4f4f4;
+}
+
+/* お問い合わせ内容用 */
+.form__input--textarea textarea {
+  height: 180px;
+}
+
+.form__input--tel {
+  display: flex;
+  align-items: center;
+}
+
+.form__input--tel input {
+  width: 170px; /* 例：入力欄の幅を設定 */
+  margin-right: 0 5px; /* スペースを作るため */
+}
+
+.form__input--tel input::placeholder {
+  text-align: center; /* プレースホルダーを中央に配置 */
+}
+
+.form__input--tel span {
+  margin: 0 20px; /* 区切りの「-」のスペースを調整 */
+  color: #897767;
+}
+
+.form__error {
+  height: 20px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.form__button {
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  margin-top: 30px; /* 上の要素と適度な距離を */
+}
+
+.form__button-submit {
+  padding: 10px; /* ボタンとテキスト間の余白 */
+  width: 150px;
+  height: 45px;
+  border: none; /* ボタンの枠線を削除 */
+  background: #82756b;
+  font-size: 20px;
+  color: #fff; /* 文字色が白 */
+  cursor: pointer; /* カーソル合わせるとポインターになる */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  text-align: center;       /* テキストを中央揃え */
+}
