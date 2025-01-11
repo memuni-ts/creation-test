@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ContactController; //お問い合わせ関連
+use App\Http\Controllers\UserController; //ユーザー管理関連
+use App\Http\Controllers\AdminController; //管理画面関連
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); //これ何のルーティングだ、、、？
 
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);

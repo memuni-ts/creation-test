@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    /* 幅を100%に */
+    border-bottom: 1px solid #E9E9E9;
+    /* ヘッダー下に線を追加 */
+}
+
+.header__inner {
+    display: flex;
+    justify-content: center;
+    /* 子要素を中央揃え */
+    align-items: center;
+    /* 垂直方向も中央揃え */
+    margin: 0 auto;
+    /* 水平に中央に配置 */
+    padding: 20px 15px;
+    /* .header__inner 内のコンテンツ（ロゴ）の余白を追加 */
+    max-width: 1230px;
+    /* 横幅が広すぎないように制限 */
+    width: 100%;
+    /* 幅を100%にして画面幅に応じて縮小 */
+}
+
+.header__logo {
+    color: #897767;
+    text-decoration: none;
+    /* ロゴに下線が付かないように */
+    font-weight: bold;
+    font-size: 34px;
+    font-family: serif;
+}

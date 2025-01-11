@@ -8,12 +8,13 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-  // フォーム表示用のアクション
+  //入力フォームの表示
   public function index()
   {
-    return view('index'); // 'contact.index' ビューを返す
+    return view('index');
   }
 
+  //確認画面の表示
   public function confirm(Request $request)
   {
     $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel-1', 'tel-2', 'tel-3', 'address', 'building', 'inquiry-type', 'content']);
