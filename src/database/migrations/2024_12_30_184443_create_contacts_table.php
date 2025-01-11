@@ -13,6 +13,7 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
+        //contactsテーブル作成
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained('categories'); //->onDelete('cascade');　これはcategoriesテーブル関連レコードが削除された場合、contactsテーブルの該当レコードも削除する設定
