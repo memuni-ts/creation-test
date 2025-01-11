@@ -83,6 +83,9 @@
         </div>
         <div class="form__button">
           <button class="form__button-submit" type="submit">送信</button>
+          <a href="{{ url('/') }}" class="form__button-edit">
+            <button type="button" class="form__button-edit">修正</button>
+          </a>
         </div>
       </form>
     </div>

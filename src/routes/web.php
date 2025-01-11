@@ -16,15 +16,16 @@ use App\Http\Controllers\AdminController; //管理画面関連
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-}); //これ何のルーティングだ、、、？
-
+//お問い合わせ関連
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'store']);
+
+//管理画面関連
 Route::get('/admin', [AdminController::class, 'index']);
-Route::get('/register', [RegisterController::class, 'showRegistrationForm']);
-Route::post('/register', [RegisterController::class, 'register']);
-Route::get('/login', [AuthController::class, 'showLoginForm']);
-Route::post('/login', [AuthController::class, 'login']);
+
+//ユーザー管理関連
+Route::get('/register', [UserController::class, 'showRegistrationForm']);
+Route::post('/register', [UserController::class, 'register']);
+Route::get('/login', [UserController::class, 'showLoginForm']);
+Route::post('/login', [UserController::class, 'login']);
